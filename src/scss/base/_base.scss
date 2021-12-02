@@ -1,0 +1,145 @@
+// Main slider starts here
+
+.main__slider {
+
+  .slider__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: calc(100vh - 128px);
+    &-content {
+      max-width: 575px;
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: normal;
+    }
+
+    &-subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    &-image {
+      max-width: 680px;
+      width: 100%;
+      position: relative;
+
+
+      .buble {
+        position: absolute;
+        &-sm {
+          top: 10%;
+          left: 15%;
+          animation: topToBottom 30s infinite;
+        }
+
+        &-md {
+          top: 80%;
+          right: 0;
+          animation: bottomToTop 18s infinite;
+        }
+
+        &-lg {
+          top: 50%;
+          left: 0;
+          animation: bottomToTop 20s infinite;
+        }
+
+        &-xl {
+          top: 30%;
+          right: 8%;
+          z-index: 6;
+          animation: topToBottom 30s infinite;
+        }
+      }
+
+    }
+
+    &-photo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 5;
+      img {
+        max-width: 470px;
+        width: 100%;
+      }
+    }
+
+
+
+    .main-btn {
+      margin-left: 25px;
+    }
+  }
+
+}
+
+.buble {
+
+  width: 100%;
+  object-fit: contain;
+
+  &-sm {
+    max-width: 60px;
+
+  }
+
+  &-md {
+    max-width: 80px;
+  }
+
+  &-lg {
+    max-width: 110px;
+  }
+
+  &-xl {
+    max-width: 150px;
+
+  }
+}
+
+.toToBottom {
+  animation: topToBottom 25s infinite;
+}
+
+
+@keyframes topToBottom {
+  0% {
+    margin-top: -50px;
+  }
+
+  50% {
+    margin-top: 50px;
+  }
+
+  100% {
+    margin-top: -50px;
+  }
+}
+
+@keyframes bottomToTop {
+  0% {
+    margin-top: 50px;
+  }
+
+  50% {
+    margin-top: -50px;
+  }
+
+  100% {
+    margin-top: 50px;
+  }
+}
+
+// Main slider ends here

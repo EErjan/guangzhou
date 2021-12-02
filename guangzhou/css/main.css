@@ -1,5 +1,5 @@
 :root {
-  --main-color: #ff0000;
+  --main-color: rgb(255, 0, 0);
 }
 
 @font-face {
@@ -102,6 +102,7 @@ ul li {
   display: block;
   padding-left: 15px;
   padding-right: 15px;
+  overflow: visible;
 }
 
 /* width */
@@ -131,6 +132,219 @@ ul li {
 
 .menu-button {
   display: none;
+}
+
+.main__slider .slider__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  min-height: calc(100vh - 128px);
+}
+
+.main__slider .slider__item-content {
+  max-width: 575px;
+  width: 100%;
+}
+
+.main__slider .slider__item-title {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+.main__slider .slider__item-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.main__slider .slider__item-image {
+  max-width: 680px;
+  width: 100%;
+  position: relative;
+}
+
+.main__slider .slider__item-image .buble {
+  position: absolute;
+}
+
+.main__slider .slider__item-image .buble-sm {
+  top: 10%;
+  left: 15%;
+  -webkit-animation: topToBottom 30s infinite;
+          animation: topToBottom 30s infinite;
+}
+
+.main__slider .slider__item-image .buble-md {
+  top: 80%;
+  right: 0;
+  -webkit-animation: bottomToTop 18s infinite;
+          animation: bottomToTop 18s infinite;
+}
+
+.main__slider .slider__item-image .buble-lg {
+  top: 50%;
+  left: 0;
+  -webkit-animation: bottomToTop 20s infinite;
+          animation: bottomToTop 20s infinite;
+}
+
+.main__slider .slider__item-image .buble-xl {
+  top: 30%;
+  right: 8%;
+  z-index: 6;
+  -webkit-animation: topToBottom 30s infinite;
+          animation: topToBottom 30s infinite;
+}
+
+.main__slider .slider__item-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.main__slider .slider__item-photo img {
+  max-width: 470px;
+  width: 100%;
+}
+
+.main__slider .slider__item .main-btn {
+  margin-left: 25px;
+}
+
+.buble {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.buble-sm {
+  max-width: 60px;
+}
+
+.buble-md {
+  max-width: 80px;
+}
+
+.buble-lg {
+  max-width: 110px;
+}
+
+.buble-xl {
+  max-width: 150px;
+}
+
+.toToBottom {
+  -webkit-animation: topToBottom 25s infinite;
+          animation: topToBottom 25s infinite;
+}
+
+@-webkit-keyframes topToBottom {
+  0% {
+    margin-top: -50px;
+  }
+
+  50% {
+    margin-top: 50px;
+  }
+
+  100% {
+    margin-top: -50px;
+  }
+}
+
+@keyframes topToBottom {
+  0% {
+    margin-top: -50px;
+  }
+
+  50% {
+    margin-top: 50px;
+  }
+
+  100% {
+    margin-top: -50px;
+  }
+}
+
+@-webkit-keyframes bottomToTop {
+  0% {
+    margin-top: 50px;
+  }
+
+  50% {
+    margin-top: -50px;
+  }
+
+  100% {
+    margin-top: 50px;
+  }
+}
+
+@keyframes bottomToTop {
+  0% {
+    margin-top: 50px;
+  }
+
+  50% {
+    margin-top: -50px;
+  }
+
+  100% {
+    margin-top: 50px;
+  }
+}
+
+.main-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--main-color);
+  color: white !important;
+  font-size: 14px;
+  padding: 15px 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(255, 0, 0, 0.5) 0px 3px 30px;
+          box-shadow: rgba(255, 0, 0, 0.5) 0px 3px 30px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.main-btn:hover {
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
+}
+
+.main-btn:active {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .header__wrap {
