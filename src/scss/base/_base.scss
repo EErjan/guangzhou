@@ -9,6 +9,7 @@
     justify-content: space-between;
     width: 100%;
     min-height: calc(100vh - 128px);
+
     &-content {
       max-width: 575px;
       width: 100%;
@@ -36,6 +37,7 @@
 
       .buble {
         position: absolute;
+
         &-sm {
           top: 10%;
           left: 15%;
@@ -70,12 +72,12 @@
       justify-content: center;
       position: relative;
       z-index: 5;
+
       img {
         max-width: 470px;
         width: 100%;
       }
     }
-
 
 
     .main-btn {
@@ -114,32 +116,71 @@
 }
 
 
-@keyframes topToBottom {
-  0% {
-    margin-top: -50px;
-  }
-
-  50% {
-    margin-top: 50px;
-  }
-
-  100% {
-    margin-top: -50px;
-  }
-}
-
-@keyframes bottomToTop {
-  0% {
-    margin-top: 50px;
-  }
-
-  50% {
-    margin-top: -50px;
-  }
-
-  100% {
-    margin-top: 50px;
-  }
-}
-
 // Main slider ends here
+
+// Secondary slider starts here
+
+.secondary__slider {
+  &-item {
+    position: relative;
+    min-height: 540px;
+    width: 100%;
+
+  }
+
+  &-wrap {
+    display: inline-block;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  &-photo {
+    width: 100%;
+    min-height: 540px;
+    position: absolute;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: rgb(2,0,36);
+      background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(255,255,255,1) 75%);
+
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+  }
+
+  &-content {
+    min-height: 540px;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+    overflow: hidden;
+
+    h3 {
+      margin-top: auto;
+    }
+  }
+}
+
+// Secondary slider ends here

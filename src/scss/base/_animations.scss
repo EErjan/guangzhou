@@ -1,0 +1,28 @@
+
+@keyframes topToBottom {
+  0% {
+    margin-top: -50px;
+  }
+
+  50% {
+    margin-top: 50px;
+  }
+
+  100% {
+    margin-top: -50px;
+  }
+}
+
+@keyframes bottomToTop {
+  0% {
+    margin-top: 50px;
+  }
+
+  50% {
+    margin-top: -50px;
+  }
+
+  100% {
+    margin-top: 50px;
+  }
+}
