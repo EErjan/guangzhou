@@ -270,13 +270,51 @@
 
     </section>
 
-    <section class="section">
+    <section class="section treatment-methods">
         <div class="my-container">
             <div class="treatment-methods__wrap">
-                <div class="treatment-methods__column treatment-methods__photo">
-
+                <div class="treatment-methods__image">
+                    <div class="treatment-methods__photo small">
+                        <img src="./img/treatment-methods-1.jpg" alt="">
+                    </div>
+                    <div class="treatment-methods__photo small ">
+                        <img src="./img/treatment-methods-2.jpg" alt="">
+                    </div>
+                    <div class="treatment-methods__photo">
+                        <img src="./img/treatment-methods-3.jpg" alt="">
+                    </div>
                 </div>
-                <div class="treatment-methods__column treatment-methods__content">
+                <div class="treatment-methods__content">
+                    <h2 class="section__title">
+                        Методы лечения
+                    </h2>
+
+                    <h3 class="section__subtitle">В клиниках «Guangzhou Medical» применяются традиционные методы
+                        китайской медицины, доказавшие
+                        свою высокую эффективность в течение тысячелетий.</h3>
+
+                    <div class="statistics">
+                        <div class="statistics__item">
+                            <h3>+<span class="count" data-count="125">125</span></h3>
+                            <h5>Lorem ipsum</h5>
+                        </div>
+
+                        <div class="statistics__item">
+                            <h3>+<span class="count" data-count="15">15</span></h3>
+                            <h5>Lorem ipsum</h5>
+                        </div>
+
+                        <div class="statistics__item">
+                            <h3>+<span class="count" data-count="233">233</span></h3>
+                            <h5>Lorem ipsum</h5>
+                        </div>
+
+                        <div class="statistics__item">
+                            <h3>+<span class="count" data-count="150">150</span></h3>
+                            <h5>Lorem ipsum</h5>
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -319,6 +357,66 @@
         });
         secondary__slider.mount();
     });
+</script>
+
+<script>
+
+    function setCommaToText(text) {
+        var count = Math.trunc(text.length / 3), // comma count
+            arr = text.split('').reverse(),
+            s = 0;
+
+        count = (count * 3 < text.length) ? count : (count - 1);
+
+        for (i = 1; i <= count; i++) {
+            arr.splice((i * 3 + s), 0, ",");
+            s++;
+        }
+
+        return arr.reverse().join('');
+    }
+
+    $(function () {
+
+        var b = true;
+        $(window).scroll(function () {
+            countNumbers('.statistics', 3000);
+        });
+
+        function countNumbers(numberContrainers, duration) {
+            var oTop = $(numberContrainers).offset().top - window.innerHeight,
+                duration = duration || 2000;
+
+            if (b && $(window).scrollTop() > oTop) {
+                $('.count').each(function () {
+                    var $this = $(this),
+                        countStart = parseInt($this.attr('data-start')) || 0,
+                        countTo = parseInt($this.attr('data-count'));
+
+                    $({
+                        countNum: countStart
+                    }).animate({
+                            countNum: countTo
+                        },
+
+                        {
+
+                            duration: duration,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(setCommaToText(Math.floor(this.countNum).toString()));
+                            },
+                            complete: function () {
+                                $this.text(setCommaToText(this.countNum.toString()));
+                            }
+
+                        });
+                });
+                b = false;
+            }
+        }
+
+    })
 </script>
 
 
