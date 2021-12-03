@@ -145,10 +145,10 @@
                                 <img src="./img/png/main-slider.png" alt="">
                             </div>
 
-                            <img src="./img/png/buble.png" class="buble buble-sm" alt="">
-                            <img src="./img/png/buble.png" class="buble buble-md" alt="">
-                            <img src="./img/png/buble.png" class="buble buble-lg" alt="">
-                            <img src="./img/png/buble.png" class="buble buble-xl" alt="">
+                            <img src="./img/png/bubble.png" class="bubble bubble-sm" alt="">
+                            <img src="./img/png/bubble.png" class="bubble bubble-md" alt="">
+                            <img src="./img/png/bubble.png" class="bubble bubble-lg" alt="">
+                            <img src="./img/png/bubble.png" class="bubble bubble-xl" alt="">
 
 
                         </div>
@@ -160,30 +160,95 @@
     </div>
 
     <section class="section">
-        <div class="secondary__slider">
-
-            <div class="splide__track">
-                <div class="splide__list">
-                    <div class="splide__slide seconrady__slider-item">
-                        <div class="my-container">
+        <div class="my-container">
+            <div class="secondary__slider">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <div class="splide__slide seconrady__slider-item">
                             <div class="secondary__slider-wrap">
                                 <div class="secondary__slider-photo">
                                     <img src="https://get.wallhere.com/photo/windows-11-abstract-minimalism-digital-dark-background-2023375.jpg"
                                          alt="">
                                 </div>
                                 <div class="secondary__slider-content">
-                                    <h3>В клиниках Guangzhou работают врачи высшей категории с многолетним опытом работы. Специалисты центров используют методы иглотерапии, медицинского кровопускания, лечения знаменитыми отварами из лекарственных растений, рекомендуемые в традиционной китайской медицине.</h3>
+                                    <h3>В клиниках Guangzhou работают врачи высшей категории с многолетним опытом
+                                        работы. Специалисты центров используют методы иглотерапии, медицинского
+                                        кровопускания, лечения знаменитыми отварами из лекарственных растений,
+                                        рекомендуемые в традиционной китайской медицине.</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="splide__slide seconrady__slider-item">
+                            <div class="secondary__slider-wrap">
+                                <div class="secondary__slider-photo">
+                                    <img src="https://get.wallhere.com/photo/windows-11-abstract-minimalism-digital-dark-background-2023375.jpg"
+                                         alt="">
+                                </div>
+                                <div class="secondary__slider-content">
+                                    <h3>В клиниках Guangzhou работают врачи высшей категории с многолетним опытом
+                                        работы. Специалисты центров используют методы иглотерапии, медицинского
+                                        кровопускания, лечения знаменитыми отварами из лекарственных растений,
+                                        рекомендуемые в традиционной китайской медицине.</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="splide__slide seconrady__slider-item">
+                            <div class="secondary__slider-wrap">
+                                <div class="secondary__slider-photo">
+                                    <img src="https://get.wallhere.com/photo/windows-11-abstract-minimalism-digital-dark-background-2023375.jpg"
+                                         alt="">
+                                </div>
+                                <div class="secondary__slider-content">
+                                    <h3>В клиниках Guangzhou работают врачи высшей категории с многолетним опытом
+                                        работы. Специалисты центров используют методы иглотерапии, медицинского
+                                        кровопускания, лечения знаменитыми отварами из лекарственных растений,
+                                        рекомендуемые в традиционной китайской медицине.</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="splide__slide seconrady__slider-item">
+                            <div class="secondary__slider-wrap">
+                                <div class="secondary__slider-photo">
+                                    <img src="https://get.wallhere.com/photo/windows-11-abstract-minimalism-digital-dark-background-2023375.jpg"
+                                         alt="">
+                                </div>
+                                <div class="secondary__slider-content">
+                                    <h3>В клиниках Guangzhou работают врачи высшей категории с многолетним опытом
+                                        работы. Специалисты центров используют методы иглотерапии, медицинского
+                                        кровопускания, лечения знаменитыми отварами из лекарственных растений,
+                                        рекомендуемые в традиционной китайской медицине.</h3>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
                 </div>
-
             </div>
-
         </div>
     </section>
+
+    <section class="section">
+        <div class="my-container">
+            <h2 class="section__title">
+                Какие услуги мы предоставляем?
+            </h2>
+
+            <div class="services__wrap">
+                <div class="services__item">
+                    <div class="services__item-icon">
+
+                    </div>
+
+                    <h4 class="services__item-title"></h4>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
 
 </main>
 
@@ -206,13 +271,18 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var splide = new Splide('.main__slider');
-        splide.mount();
+        var main__slider = new Splide('.main__slider', {
+            arrows: false,
+        });
+
+        main__slider.mount();
     });
 
     document.addEventListener('DOMContentLoaded', function () {
-        var splide = new Splide('.secondary__slider');
-        splide.mount();
+        var secondary__slider = new Splide('.secondary__slider', {
+            arrows: false,
+        });
+        secondary__slider.mount();
     });
 </script>
 
