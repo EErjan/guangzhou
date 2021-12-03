@@ -47,8 +47,6 @@ body {
   text-rendering: optimizeLegibility;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  min-height: 100vh;
-  margin-bottom: 300px;
 }
 
 h1,
