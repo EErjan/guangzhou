@@ -278,8 +278,12 @@
     flex-direction: column;
     width: 100%;
     min-height: 295px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 16px;
+    transition: .3s;
+
+    &:hover {
+    }
 
     &-icon {
       min-height: 120px;
@@ -303,3 +307,27 @@
 }
 
 // Services block ends here
+
+// Treatment methods start here
+
+.treatment-methods {
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  &__column {
+
+  }
+
+  &__photo {
+
+  }
+
+  &__content {
+
+  }
+}
+
+// Treatment methods ends here
