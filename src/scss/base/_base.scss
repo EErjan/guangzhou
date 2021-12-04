@@ -353,6 +353,7 @@
 
     &:last-child {
       grid-area: large;
+
       img {
         max-height: 430px;
       }
@@ -384,6 +385,7 @@
     background-color: #eeeeee;
     border-radius: 16px;
     margin-bottom: 50px;
+
     &__item {
       display: flex;
       flex-direction: column;
@@ -404,8 +406,7 @@
   }
 }
 
-
-// Doctors starts here
+// Doctors start here
 
 .doctors {
   &__wrap {
@@ -461,3 +462,176 @@
     color: var(--main-color);
   }
 }
+
+// Branches start here
+
+.branches {
+  &__slider {
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 16px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+
+    .splide__arrows {
+
+    }
+
+    .splide__track {
+    }
+
+    &-item {
+      display: flex;
+
+      &.active {
+        background-color: white;
+        border-radius: 12px;
+
+        a {
+          color: var(--main-color)!important;
+          font-weight: 600;
+        }
+      }
+
+
+      a {
+        border: none;
+        color: white;
+        border-radius: 12px;
+        display: flex;
+        margin: 10px 20px;
+      }
+
+    }
+  }
+
+  .tab-content {
+    width: 100%;
+    position: relative;
+  }
+
+  &__content {
+    background-color: white;
+    border-radius: 16px;
+    padding: 30px;
+    position: absolute;
+    left: 50px;
+    bottom: 70px;
+    max-width: 400px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

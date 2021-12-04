@@ -1,0 +1,155 @@
+.footer {
+  background-color: #4c4c4c;
+  overflow: hidden;
+
+  &__top {
+    border-bottom: 2px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 50px;
+    padding: 60px 0;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+    &-left {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      color: white;
+    }
+
+    &-right {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__column {
+
+  }
+
+  &__title {
+    font-size: 42px;
+    color: white;
+    font-weight: 600;
+    line-height: normal;
+
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: white;
+  }
+
+  &__logo {
+    margin-right: 50px;
+    margin-bottom: 3px;
+  }
+
+  &__contacts {
+    h5 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    a {
+      font-weight: 600;
+      color: white !important;
+      margin-bottom: 0;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      margin-bottom: 20px;
+      margin-right: 50px;
+    }
+
+    &-wrap {
+
+    }
+
+    &-title {
+      color: white;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    &-list {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: white;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      color: white !important;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__socials {
+    h5 {
+      color: white;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+
+    }
+
+    &-wrap {
+
+    }
+
+    &-item {
+      background-color: white!important;
+      padding: 10px;
+      display: inline-flex;
+      border-radius: 12px;
+      min-width: 36px;
+      justify-content: center;
+      margin-right: 10px;
+      transition: .2s;
+
+      &:hover {
+
+        transform: scale(1.1);
+
+        .fa {
+          color: var(--main-color);
+        }
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+
+      .fa {
+        color: #4c4c4c;
+        font-size: 16px;
+        transition: .2s;
+      }
+    }
+  }
+
+}
+

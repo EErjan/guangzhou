@@ -424,6 +424,121 @@
         </div>
     </section>
 
+    <section class="section branches">
+        <h2 class="section__title" style="padding: 0 15px">
+            Филиалы
+        </h2>
+
+        <div>
+            <div class="my-container">
+                <div class="nav nav-tabs branches__slider" id="myTab" role="tablist">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide branches__slider-item active">
+                                <a id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                   aria-controls="home" aria-selected="true">г.Ташкент</a>
+                            </div>
+
+                            <div class="splide__slide branches__slider-item">
+                                <a id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                   aria-controls="profile" aria-selected="false">г.Андижан</a>
+                            </div>
+
+                            <div class="splide__slide branches__slider-item">
+                                <a id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                   aria-controls="contact" aria-selected="false">г.Бухара</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="map" style="position:relative;overflow:hidden;">
+                            <iframe src="https://yandex.uz/map-widget/v1/-/CCUurASQoB" width="100%" height="720"
+                                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                        </div>
+                        <div class="branches__content">
+                            <div class="branches__item">
+                                <h2 class="branches__title">Адрес</h2>
+                                <h5 class="branches__text">г. Ташкент, Бектемирский р-н, ул. Хусейна Бойкаро, дом 42.
+                                    (Ор-р: призывной центр)</h5>
+                            </div>
+
+                            <div class="branches__item">
+                                <h2 class="branches__title">Работаем:</h2>
+                                <h5 class="branches__text">пн-пт, с 9:00 до 18:00</h5>
+                            </div>
+
+
+                            <div class="branches__item">
+                                <h2 class="branches__title">Телефон</h2>
+                                <h5 class="branches__text"><a href="tel: +998 94 952 11 11">+998 94 952 11 11</a></h5>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="map" style="position:relative;overflow:hidden;">
+                            <iframe src="https://yandex.uz/map-widget/v1/-/CCUurASQoB" width="100%" height="720"
+                                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                        </div>
+                        <div class="branches__content">
+                            <div class="branches__item">
+                                <h2 class="branches__title">Адрес</h2>
+                                <h5 class="branches__text">г. Ташкент, Бектемирский р-н, ул. Хусейна Бойкаро, дом 42.
+                                    (Ор-р: призывной центр)</h5>
+                            </div>
+
+                            <div class="branches__item">
+                                <h2 class="branches__title">Работаем:</h2>
+                                <h5 class="branches__text">пн-пт, с 9:00 до 18:00</h5>
+                            </div>
+
+
+                            <div class="branches__item">
+                                <h2 class="branches__title">Телефон</h2>
+                                <h5 class="branches__text"><a href="tel: +998 94 952 11 11">+998 94 952 11 11</a></h5>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="map" style="position:relative;overflow:hidden;">
+                            <iframe src="https://yandex.uz/map-widget/v1/-/CCUurASQoB" width="100%" height="720"
+                                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                        </div>
+                        <div class="branches__content">
+                            <div class="branches__item">
+                                <h2 class="branches__title">Адрес</h2>
+                                <h5 class="branches__text">г. Ташкент, Бектемирский р-н, ул. Хусейна Бойкаро, дом 42.
+                                    (Ор-р: призывной центр)</h5>
+                            </div>
+
+                            <div class="branches__item">
+                                <h2 class="branches__title">Работаем:</h2>
+                                <h5 class="branches__text">пн-пт, с 9:00 до 18:00</h5>
+                            </div>
+
+
+                            <div class="branches__item">
+                                <h2 class="branches__title">Телефон</h2>
+                                <h5 class="branches__text"><a href="tel: +998 94 952 11 11">+998 94 952 11 11</a></h5>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
 </main>
 
 @@include('layouts/_footer.html')
@@ -458,6 +573,23 @@
         });
         secondary__slider.mount();
     });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let branches__slider = new Splide('.branches__slider', {
+            arrows: true,
+            pagination: false,
+            autoWidth: true,
+        });
+        branches__slider.mount();
+    });
+
+    $('.branches__slider-item').on('click', function () {
+        $('.branches__slider-item').removeClass('active');
+        $(this).addClass('active');
+    });
+
+
 </script>
 
 <script>
