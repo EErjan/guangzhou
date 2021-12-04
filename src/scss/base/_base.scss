@@ -1,4 +1,4 @@
-// Main slider starts here
+// Main slider
 
 .main__slider {
   position: relative;
@@ -143,7 +143,7 @@
   animation: topToBottom 25s infinite;
 }
 
-// Secondary slider starts here
+// Secondary slider
 
 .secondary__slider {
   position: relative;
@@ -231,7 +231,7 @@
   }
 }
 
-// Section block starts here
+// Section block
 
 .section {
   padding: 50px 0;
@@ -257,9 +257,40 @@
       background-size: contain;
     }
   }
+
+  &__subtitle {
+
+  }
+
+  &__subtitle-secondary {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 50px;
+  }
+
+  &__title-secondary {
+    position: relative;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 50px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 0;
+      background: url('../../img/png/line-element-2.png');
+      width: 100%;
+      height: 4px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
 }
 
-// Services block starts here
+// Services block
 
 .services {
   &__wrap {
@@ -305,7 +336,7 @@
   }
 }
 
-// Treatment methods start here
+// Treatment methods
 
 .treatment-methods {
   &__wrap {
@@ -316,8 +347,7 @@
 
   &__image {
     display: grid;
-    grid-template-areas: 'small-1 small-2'
-    'large large';
+    grid-template-areas: 'small-1 small-2' 'large large';
     grid-gap: 30px;
   }
 
@@ -406,7 +436,7 @@
   }
 }
 
-// Doctors start here
+// Doctors
 
 .doctors {
   &__wrap {
@@ -463,7 +493,7 @@
   }
 }
 
-// Branches start here
+// Branches
 
 .branches {
   &__slider {
@@ -488,7 +518,7 @@
         border-radius: 12px;
 
         a {
-          color: var(--main-color)!important;
+          color: var(--main-color) !important;
           font-weight: 600;
         }
       }
@@ -523,6 +553,7 @@
 
   &__item {
     margin-bottom: 30px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -542,10 +573,131 @@
 }
 
 
+// text blocck
 
+.text__block {
+  font-size: 16px;
+  line-height: 1.6;
+}
 
+b {
+  font-weight: 600;
+}
 
+// About page
 
+.about__slider {
+  position: relative;
+  margin: 70px 0;
+
+  &-item {
+
+    &.is-active {
+      img {
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-height: 390px;
+      border-radius: 26px;
+      overflow: hidden;
+      height: 100%;
+      object-fit: cover;
+      opacity: .3;
+    }
+  }
+}
+
+// Services page {
+
+.services {
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-gap: 30px;
+  }
+
+  &__sidebar {
+    &-item {
+      margin-bottom: 20px;
+
+      &:hover {
+        a {
+          &::after {
+            width: 30%;
+          }
+        }
+      }
+
+      &.active {
+        a {
+          &::after {
+            width: 30%;
+          }
+        }
+      }
+
+    }
+
+    &-link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      font-weight: 600;
+      line-height: normal;
+      font-size: 18px;
+
+      &::before {
+        content: '\f105';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: 'FontAwesome';
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 20px;
+        height: 2px;
+        width: 0;
+        background-color: var(--main-color);
+        transition: .5s;
+      }
+
+    }
+  }
+
+  &__main {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 50px;
+  }
+
+  &__photo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
 
 
 
