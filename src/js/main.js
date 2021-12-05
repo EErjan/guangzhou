@@ -15,9 +15,18 @@ try {
 }
 
 
-var Header = document.querySelector('header');
-var headroom = new Headroom(Header, {
+let Header = document.querySelector('header');
+let headroom = new Headroom(Header, {
     "offset": 205,
     "tolerance": 5
 });
 headroom.init();
+
+
+$('.cta__photo').on('click', function(){
+    $(".cta__content").css('display','block');
+});
+
+$('.cta__content').on('click', function(){
+    $(".cta__content").css('display','none');
+});

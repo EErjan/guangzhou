@@ -12,9 +12,8 @@
 
   &__bottom {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding: 50px 0;
 
     &-left {
@@ -22,6 +21,7 @@
       align-items: flex-end;
       flex-wrap: wrap;
       color: white;
+      margin-right: 50px;
     }
 
     &-right {
@@ -57,6 +57,8 @@
   }
 
   &__contacts {
+    margin-top: 20px;
+
     h5 {
       font-size: 18px;
       margin-bottom: 5px;
