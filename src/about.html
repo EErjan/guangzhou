@@ -130,7 +130,21 @@
             perPage: 3,
             pagination: false,
             autoplay: 'true',
-            interval: 3000
+            interval: 3000,
+            breakpoints: {
+                1200: {
+                    gap: 20,
+                },
+                768: {
+                    perPage: 2,
+                    gap: 20,
+                },
+                400: {
+                    perPage: 1,
+                    focus: false,
+                    gap: 10,
+                },
+            }
         });
         about__slider.mount();
     });
