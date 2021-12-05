@@ -706,6 +706,34 @@ ul li {
   color: var(--main-color);
 }
 
+.doctors__page .doctors__subtitle {
+  font-size: 18px;
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.doctors__page .doctors__item a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+  border-radius: 16px;
+  overflow: hidden;
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.doctors__page .doctors__item a .fa {
+  margin-left: 7px;
+}
+
 .branches__slider {
   background-color: var(--main-color);
   border: none;
@@ -805,7 +833,7 @@ b {
   opacity: .3;
 }
 
-.services__wrap {
+.services__container {
   display: grid;
   grid-template-columns: 350px 1fr;
   grid-gap: 30px;
@@ -891,6 +919,24 @@ b {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.treatment-methods__main ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.treatment-methods__main ul li {
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+
+.treatment-methods__main ul li:last-child {
+  margin-bottom: 0;
+}
+
+.treatment-methods__main .treatment-methods__item {
+  margin-bottom: 50px;
 }
 
 .main-btn {
