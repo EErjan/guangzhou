@@ -45,7 +45,7 @@
                                 лечения и традиционные китайские подходы.
                             </h4>
 
-                            <a href="#!" class="main-btn">
+                            <a href="/about.html" class="main-btn">
                                 Читать дальше <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -75,7 +75,7 @@
                                 лечения и традиционные китайские подходы.
                             </h4>
 
-                            <a href="#!" class="main-btn">
+                            <a href="/about.html" class="main-btn">
                                 Читать дальше <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -105,7 +105,7 @@
                                 лечения и традиционные китайские подходы.
                             </h4>
 
-                            <a href="#!" class="main-btn">
+                            <a href="/about.html" class="main-btn">
                                 Читать дальше <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -269,13 +269,10 @@
                     </h4>
                 </a>
             </div>
-            <a href="#!" class="main-btn justify-content-center"> Все услуги
+            <a href="/services.html" class="main-btn justify-content-center"> Все услуги
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             </a>
         </div>
-
-
-
 
     </section>
 
@@ -331,7 +328,7 @@
                         </div>
                     </div>
 
-                    <a href="#!" class="main-btn">
+                    <a href="/treatment-methods.html" class="main-btn">
                         Подробнее
                         <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                     </a>
@@ -433,7 +430,7 @@
                 </a>
 
             </div>
-            <a href="#!" class="main-btn">
+            <a href="/doctors.html" class="main-btn">
                 Все врачи
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             </a>
@@ -556,6 +553,18 @@
 
     </section>
 
+    <div class="cta">
+        <div class="cta__photo">
+            <img src="./img/png/operator.png" alt="">
+        </div>
+
+        <div class="cta__content">
+            Здравствуйте!
+            Чем я могу вам помочь?
+        </div>
+
+    </div>
+
 </main>
 
 @@include('layouts/_footer.html')
@@ -572,21 +581,28 @@
 <script src="libs/waves-effect/waves-effect.js"></script>
 <script src="libs/splide-slider/js/splide.min.js"></script>
 <script src="libs/parallax/jquery.parallax.min.js"></script>
+<script src="libs/headroom.js"></script>
 
 <script src="js/main.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var main__slider = new Splide('.main__slider', {
+        let main__slider = new Splide('.main__slider', {
+            type   : 'loop',
             arrows: false,
+            autoplay: 'true',
+            interval: 5000
         });
 
         main__slider.mount();
     });
 
     document.addEventListener('DOMContentLoaded', function () {
-        var secondary__slider = new Splide('.secondary__slider', {
+        let secondary__slider = new Splide('.secondary__slider', {
+            type   : 'loop',
             arrows: false,
+            autoplay: 'true',
+            interval: 10000
         });
         secondary__slider.mount();
     });
@@ -594,9 +610,10 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         let branches__slider = new Splide('.branches__slider', {
-            arrows: false,
+            arrows: true,
             pagination: false,
             autoWidth: true,
+            autoplay: true,
         });
         branches__slider.mount();
     });
@@ -606,6 +623,14 @@
         $(this).addClass('active');
     });
 
+
+    $('.cta__photo').on('click', function(){
+        $(".cta__content").css('display','block');
+    });
+
+    $('.cta__content').on('click', function(){
+        $(".cta__content").css('display','none');
+    });
 
 </script>
 
