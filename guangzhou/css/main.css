@@ -322,6 +322,7 @@ ul li {
 }
 
 .bubble {
+  z-index: 1;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -499,11 +500,36 @@ ul li {
   background-size: contain;
 }
 
+.services {
+  position: relative;
+}
+
 .services__wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px 50px;
   margin-bottom: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.services__wrap .bubble-element {
+  position: absolute;
+  z-index: 1;
+}
+
+.services__wrap .bubble-element.first {
+  top: -60px;
+  left: -55px;
+  -webkit-animation: topToBottom 15s infinite;
+          animation: topToBottom 15s infinite;
+}
+
+.services__wrap .bubble-element.second {
+  top: calc(100% - 160px);
+  right: -55px;
+  -webkit-animation: bottomToTop 20s infinite;
+          animation: bottomToTop 20s infinite;
 }
 
 .services__item {
@@ -520,6 +546,7 @@ ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: white;
   width: 100%;
   min-height: 295px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -528,6 +555,7 @@ ul li {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+  z-index: 2;
 }
 
 .services__item-icon {
@@ -551,15 +579,37 @@ ul li {
 }
 
 .treatment-methods__wrap {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
+}
+
+.treatment-methods__wrap .bubble-element {
+  position: absolute;
+  z-index: 1;
+}
+
+.treatment-methods__wrap .bubble-element.first {
+  top: 150px;
+  left: -55px;
+  -webkit-animation: bottomToTop 20s infinite;
+          animation: bottomToTop 20s infinite;
+}
+
+.treatment-methods__wrap .bubble-element.second {
+  top: calc(100% - 80px);
+  right: -55px;
+  -webkit-animation: topToBottom 15s infinite;
+          animation: topToBottom 15s infinite;
 }
 
 .treatment-methods__image {
   display: grid;
   grid-template-areas: 'small-1 small-2' 'large large';
   grid-gap: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 .treatment-methods__photo {
@@ -602,6 +652,11 @@ ul li {
 
 .treatment-methods__photo:last-child img {
   max-height: 430px;
+}
+
+.treatment-methods__content {
+  position: relative;
+  z-index: 2;
 }
 
 .treatment-methods .section__title {
