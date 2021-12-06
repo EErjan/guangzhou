@@ -1,4 +1,3 @@
-
 @keyframes topToBottom {
   0% {
     margin-top: -50px;
@@ -26,7 +25,6 @@
     margin-top: 50px;
   }
 }
-
 
 
 @-webkit-keyframes wobble-hor-bottom {
@@ -58,6 +56,7 @@
     transform: translateX(-6px) rotate(-1.2deg);
   }
 }
+
 @keyframes wobble-hor-bottom {
   0%,
   100% {
@@ -85,5 +84,24 @@
   75% {
     -webkit-transform: translateX(-6px) rotate(-1.2deg);
     transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
