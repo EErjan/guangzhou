@@ -130,6 +130,10 @@
     }
   }
 
+  .doctors__inner-photo {
+    max-width: 420px;
+  }
+
 }
 
 @media (max-width: 991px) {
@@ -239,6 +243,15 @@
   .services__container {
     grid-template-columns: 250px 1fr;
     grid-gap: 30px;
+  }
+
+  .doctors__inner-photo {
+    max-width: 350px;
+    margin: 0 30px 30px 0;
+  }
+
+  .doctors__inner-title {
+    font-size: 26px;
   }
 
 
@@ -376,6 +389,10 @@
 
   .navigation-drawer {
     max-width: 70%;
+  }
+
+  .doctors__inner-photo {
+    max-width: 200px;
   }
 
 }
@@ -573,6 +590,21 @@
 
   .main__slider .slider__item .main-btn {
     margin-left: 0;
+  }
+
+  .doctors__inner-photo {
+    max-width: 200px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .doctors__inner-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
 }
