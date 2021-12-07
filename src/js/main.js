@@ -189,3 +189,8 @@ try {
 }
 
 
+try {
+    AOS.init();
+} catch (e) {
+
+}

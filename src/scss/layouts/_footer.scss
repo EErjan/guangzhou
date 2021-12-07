@@ -104,6 +104,12 @@
 
     &-link {
       color: white !important;
+      display: flex;
+      align-items: center;
+
+      .fa {
+        margin-left: 7px;
+      }
       font-size: 14px;
       font-weight: 500;
     }

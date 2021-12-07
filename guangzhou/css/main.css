@@ -1813,8 +1813,18 @@ b {
 
 .footer__details-link {
   color: white !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   font-weight: 500;
+}
+
+.footer__details-link .fa {
+  margin-left: 7px;
 }
 
 .footer__socials h5 {
@@ -1999,6 +2009,25 @@ b {
 
   .doctors__inner-photo {
     max-width: 420px;
+  }
+
+  .cta {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .cta__photo {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .cta__photo img {
+    width: 100%;
+  }
+
+  .cta__content {
+    top: -70px;
+    left: -300px;
   }
 }
 
@@ -2551,5 +2580,11 @@ b {
 
   .footer__socials-item:last-child {
     margin-right: 0;
+  }
+
+  .footer__details-link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
