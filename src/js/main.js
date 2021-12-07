@@ -194,3 +194,5 @@ try {
 } catch (e) {
 
 }
+
+// $('.preloader').delay(150).fadeOut('slow');

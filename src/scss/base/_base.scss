@@ -615,6 +615,7 @@
       }
 
     }
+
     &-photo {
       position: sticky;
       top: 0;
@@ -625,7 +626,7 @@
       overflow: hidden;
       border-radius: 26px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-      margin:  0 50px 50px 0;
+      margin: 0 50px 50px 0;
       float: left;
 
       img {
@@ -997,13 +998,29 @@ b {
 
 }
 
+// Preloader block
 
+.preloader {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
 
+  &__photo {
+    max-width: 600px;
 
-
-
-
-
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
 
 
 
